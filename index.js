@@ -31,7 +31,7 @@ dotenv.config();
 const app = express();
 app.use(cors(
     {
-        origin: "https://postify-karq.onrender.com",
+        origin: "https://postify-p3nw.onrender.com",
     }
 ));
 app.get("/",(req,res) => {
