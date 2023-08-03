@@ -67,7 +67,7 @@ app.use('/users', userRoutes);
 app.use('/posts', postRoutes);
 
 /* MONGOOSE SETUP */
-const PORT = process.env.port || 6001;
+const PORT = process.env.PORT || 6001;
 mongoose
     .connect(process.env.MONGO_URL, {
         useNewUrlParser: true,
@@ -75,19 +75,7 @@ mongoose
     })
     .then(() => {
         app.listen(PORT, () => console.log(`Serving on port: ${PORT}`));
-
-        // Post.deleteMany({})
-        // .then(() => {
-        //   console.log('All documents deleted successfully.');
-        // })
-        // .catch((err) => {
-        //   console.error('Error deleting documents:', err);
-        // });
-
-
-        /* ADD DATA ONE TIME */
-        // User.insertMany(users);
-        // Post.insertMany(posts);
+        console.log("Database Connected!");
     })
     .catch((err) => console.log(`${err} did not connect!!!`));
 
