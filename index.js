@@ -75,19 +75,6 @@ mongoose
     })
     .then(() => {
         app.listen(PORT, () => console.log(`Serving on port: ${PORT}`));
-
-        // Post.deleteMany({})
-        // .then(() => {
-        //   console.log('All documents deleted successfully.');
-        // })
-        // .catch((err) => {
-        //   console.error('Error deleting documents:', err);
-        // });
-
-
-        /* ADD DATA ONE TIME */
-        // User.insertMany(users);
-        // Post.insertMany(posts);
     })
     .catch((err) => console.log(`${err} did not connect!!!`));
 
